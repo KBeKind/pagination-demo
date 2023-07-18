@@ -21,18 +21,18 @@ public class SampleDataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-
         Integer listLength = 100;
 
+        // Creates Fake Persons
         for (int i = 0; i < listLength; i++) {
-
             Person person = new Person(
                     "Klee" + i,
                     "BeKind" + i,
                     new Address("Street" + i,"City" + i));
             personRepository.save(person);
-
         }
+
+
 
     }
 }
